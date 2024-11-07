@@ -17,5 +17,5 @@ public interface IEtudiantService {
 
     // Delete
     void deleteEtudiant(long id);
-
+    Etudiant getEtudiantById(long id);
 }

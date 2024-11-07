@@ -32,4 +32,10 @@ public class EtudiantService implements IEtudiantService{
     public void deleteEtudiant(long id) {
         etudiantRepository.deleteById(id);
     }
+
+    @Override
+    public Etudiant getEtudiantById(long id) {
+        return etudiantRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Etudiant not found with id: " + id));
+    }
 }

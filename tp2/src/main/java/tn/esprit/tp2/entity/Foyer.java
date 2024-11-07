@@ -30,4 +30,8 @@ public class Foyer {
 
     @OneToMany(cascade = CascadeType.ALL ,mappedBy = "foyer")
     private Set<Bloc> blocs;
+
+    public long getIdFoyer() {
+        return idFoyer;
+    }
 }

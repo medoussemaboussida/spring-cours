@@ -33,4 +33,8 @@ public class Chambre {
 
     @OneToMany(cascade = CascadeType.ALL)
     private Set<Reservation> reservations;
+
+    public long getIdChambre() {
+        return idChambre;
+    }
 }

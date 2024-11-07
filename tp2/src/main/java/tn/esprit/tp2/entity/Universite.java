@@ -24,4 +24,8 @@ public class Universite {
 
     @OneToOne
     private Foyer foyer;
+
+    public long getIdUniversite() {
+        return idUniversite;
+    }
 }

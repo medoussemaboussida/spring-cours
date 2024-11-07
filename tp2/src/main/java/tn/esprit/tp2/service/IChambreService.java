@@ -18,9 +18,9 @@ public interface IChambreService {
 
     // Delete
     void deleteChambre(long id);
-
+    Chambre getChambreById(long id);
 
     //to do
     //reservation pour chambre avec nombre sup a entier donnee
-    List<Reservation> getReservationForChambreWithNumberGraterThan(Long number);
+    //List<Reservation> getReservationForChambreWithNumberGraterThan(Long number);
 }

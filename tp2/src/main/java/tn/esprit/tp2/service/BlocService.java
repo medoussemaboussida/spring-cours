@@ -32,4 +32,9 @@ public class BlocService implements IBlocService{
     public void deleteBloc(long id) {
         blocRepository.deleteById(id);
     }
+    @Override
+    public Bloc getBlocById(long id) {
+        return blocRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Bloc not found with id: " + id));
+    }
 }

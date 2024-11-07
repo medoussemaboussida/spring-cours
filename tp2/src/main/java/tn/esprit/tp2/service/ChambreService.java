@@ -2,6 +2,7 @@ package tn.esprit.tp2.service;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.beans.factory.annotation.Autowired;
+import tn.esprit.tp2.entity.Bloc;
 import tn.esprit.tp2.entity.Chambre;
 import tn.esprit.tp2.entity.Reservation;
 import tn.esprit.tp2.repository.ChambreRepository;
@@ -36,11 +37,18 @@ public class ChambreService implements IChambreService {
     }
 
     @Override
+    public Chambre getChambreById(long id) {
+        return chambreRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("chambre not found with id: " + id));
+    }
+
+
+    /*@Override
     public List<Reservation> getReservationForChambreWithNumberGraterThan(Long number)
     {
         List<Chambre> chambres = chambreRepository.findByNumber(number);
         return chambres.stream().flatMap(chambre -> chambre.getReservations().stream()).collect(Collectors.toList());
-    }
+    }*/
 
 }
 

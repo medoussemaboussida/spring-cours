@@ -17,4 +17,6 @@ public interface IBlocService {
 
     // Delete
     void deleteBloc(long id);
+
+     Bloc getBlocById(long id);
 }

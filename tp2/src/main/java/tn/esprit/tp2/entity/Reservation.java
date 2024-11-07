@@ -29,4 +29,8 @@ public class Reservation {
 
     @ManyToMany(cascade = CascadeType.ALL )
     private Set<Etudiant> etudiants;
+
+    public long getIdReservation() {
+        return idReservation;
+    }
 }
