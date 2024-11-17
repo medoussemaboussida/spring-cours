@@ -34,4 +34,8 @@ public class Foyer {
     public long getIdFoyer() {
         return idFoyer;
     }
+
+    public void setUniversite(Universite universite) {
+        this.universite = universite;
+    }
 }

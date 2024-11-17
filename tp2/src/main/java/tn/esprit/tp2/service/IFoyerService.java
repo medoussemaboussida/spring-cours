@@ -14,4 +14,5 @@ public interface IFoyerService {
      Foyer updateFoyer(Foyer foyer);
 
      void deleteFoyer(long id);
+     public Foyer ajouterFoyerEtAffecterAUniversite(Foyer foyer, long idUniversite);
 }

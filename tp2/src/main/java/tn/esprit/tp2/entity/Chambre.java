@@ -37,4 +37,8 @@ public class Chambre {
     public long getIdChambre() {
         return idChambre;
     }
+
+    public void setNumeroChambre(long numeroChambre) {
+        this.numeroChambre = numeroChambre;
+    }
 }
