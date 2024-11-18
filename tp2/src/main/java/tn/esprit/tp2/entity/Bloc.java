@@ -35,4 +35,12 @@ public class Bloc {
     public long getIdBloc() {
         return idBloc;
     }
+
+    public void setFoyer(Foyer foyer) {
+        this.foyer = foyer;
+    }
+
+    public Set<Chambre> getChambres() {
+        return chambres;
+    }
 }

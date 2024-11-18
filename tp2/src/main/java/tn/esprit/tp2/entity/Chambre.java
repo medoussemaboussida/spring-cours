@@ -41,4 +41,7 @@ public class Chambre {
     public void setNumeroChambre(long numeroChambre) {
         this.numeroChambre = numeroChambre;
     }
+
+
+
 }

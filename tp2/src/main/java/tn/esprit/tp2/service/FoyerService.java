@@ -2,6 +2,7 @@ package tn.esprit.tp2.service;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.beans.factory.annotation.Autowired;
+import tn.esprit.tp2.entity.Bloc;
 import tn.esprit.tp2.entity.Chambre;
 import tn.esprit.tp2.entity.Foyer;
 import tn.esprit.tp2.entity.Universite;
@@ -50,7 +51,6 @@ public class FoyerService implements IFoyerService{
 
         // Associer le foyer à l'Université
         universite.setFoyer(foyer);
-
         // Ajouter le foyer avec ses blocs associés (cascade = ALL pour que les blocs soient aussi ajoutés)
         Foyer savedFoyer = foyerRepository.save(foyer);
 

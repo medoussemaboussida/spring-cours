@@ -47,11 +47,18 @@ public class BlocService implements IBlocService{
         Bloc bloc = blocRepository.findById(idBloc)
                 .orElseThrow(() -> new RuntimeException("Bloc non trouvé avec l'ID : " + idBloc));
 
-        // Pour chaque numéro de chambre, on crée ou associe la chambre au bloc
+        // Parcourir les numéros de chambre fournis
         for (Long num : numChambre) {
-            // Créer la chambre et la lier au bloc
-            Chambre chambre = new Chambre();
-            chambre.setNumeroChambre(num);
+            // Vérifier si une chambre avec ce numéro existe déjà
+            Chambre chambre = chambreRepository.findByNumeroChambre(num)
+                    .orElseGet(() -> {
+                        // Si la chambre n'existe pas, créer une nouvelle instance
+                        Chambre nouvelleChambre = new Chambre();
+                        nouvelleChambre.setNumeroChambre(num);
+                        return nouvelleChambre;
+                    });
+
+            // Associer la chambre au bloc
             chambre.setBloc(bloc);
 
             // Sauvegarder la chambre

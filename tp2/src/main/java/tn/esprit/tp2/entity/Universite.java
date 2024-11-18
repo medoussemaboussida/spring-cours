@@ -36,4 +36,9 @@ public class Universite {
     public String getUniversiteName() {
         return universiteName;
     }
+
+    public Foyer getFoyer() {
+        return foyer;
+    }
+
 }

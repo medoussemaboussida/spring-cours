@@ -38,4 +38,13 @@ public class Foyer {
     public void setUniversite(Universite universite) {
         this.universite = universite;
     }
+
+    public Set<Bloc> getBlocs() {
+        return blocs;
+    }
+
+    public Universite getUniversite() {
+        return universite;
+    }
+
 }

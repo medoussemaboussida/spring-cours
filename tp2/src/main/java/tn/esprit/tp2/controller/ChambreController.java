@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.tp2.entity.Chambre;
+import tn.esprit.tp2.entity.TypeChambre;
 import tn.esprit.tp2.service.IChambreService;
 
 import java.util.List;
@@ -40,4 +41,13 @@ public class ChambreController {
         return chambreService.getChambreById(id);
     }
 
+    @GetMapping("/parUniversite/{nomUniversite}")
+    public List<Chambre> getChambresParNomUniversite(@PathVariable String nomUniversite) {
+        return chambreService.getChambresParNomUniversite(nomUniversite);
+    }
+
+    @GetMapping("/parBlocEtType/{idBloc}/{typeC}")
+    public List<Chambre> getChambresParBlocEtType(@PathVariable long idBloc, @PathVariable TypeChambre typeC) {
+        return chambreService.getChambresParBlocEtType(idBloc, typeC);
+    }
 }
