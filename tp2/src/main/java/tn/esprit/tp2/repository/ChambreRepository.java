@@ -20,4 +20,11 @@ public interface ChambreRepository extends JpaRepository<Chambre, Long> {
     // Recherche des chambres par bloc et type de chambre avec JPQL
     @Query("SELECT c FROM Chambre c WHERE c.bloc.idBloc = :idBloc AND c.typeC = :typeC")
     List<Chambre> findChambresByBlocAndType(@Param("idBloc") long idBloc, @Param("typeC") TypeChambre typeC);
+
+
+    @Query("select c from Chambre c join Reservation r on (r member of c.reservations ) where c.bloc.idBloc = :idBloc and  year(r.dateReservation) != year(current date) ")
+    Chambre getChambreForReservation(long idBloc);
+
+    @Query("select c from Chambre c join Reservation r on (r member of c.reservations) where r.idReservation= :idReservation")
+    Chambre findByIdReservation(Long idReservation);
 }

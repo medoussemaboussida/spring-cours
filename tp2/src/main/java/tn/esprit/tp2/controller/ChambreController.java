@@ -15,7 +15,7 @@ public class ChambreController {
     @Autowired
     IChambreService chambreService;
 
-  @PostMapping("add")
+  @PostMapping("add") 
   public Chambre addChambre(@RequestBody Chambre chambre) {
       return chambreService.addChambre(chambre);
   }

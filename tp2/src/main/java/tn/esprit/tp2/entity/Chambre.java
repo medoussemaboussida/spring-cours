@@ -3,6 +3,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -32,21 +33,6 @@ public class Chambre {
     Bloc bloc;
 
     @OneToMany(cascade = CascadeType.ALL)
-    private Set<Reservation> reservations;
+    private Set<Reservation> reservations= new HashSet<>();
 
-    public long getIdChambre() {
-        return idChambre;
-    }
-
-    public void setNumeroChambre(long numeroChambre) {
-        this.numeroChambre = numeroChambre;
-    }
-
-    public Set<Reservation> getReservations() {
-        return reservations;
-    }
-
-    public void setReservations(Set<Reservation> reservations) {
-        this.reservations = reservations;
-    }
 }

@@ -32,15 +32,5 @@ public class Bloc {
     @OneToMany(cascade = CascadeType.ALL ,mappedBy = "bloc")
     private Set<Chambre> chambres;
 
-    public long getIdBloc() {
-        return idBloc;
-    }
 
-    public void setFoyer(Foyer foyer) {
-        this.foyer = foyer;
-    }
-
-    public Set<Chambre> getChambres() {
-        return chambres;
-    }
 }

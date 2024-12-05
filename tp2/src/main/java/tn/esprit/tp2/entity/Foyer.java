@@ -28,23 +28,9 @@ public class Foyer {
     @OneToOne (mappedBy = "foyer")
     private Universite universite;
 
-    @OneToMany(cascade = CascadeType.ALL ,mappedBy = "foyer")
+    @OneToMany(cascade = CascadeType.PERSIST ,mappedBy = "foyer")
     private Set<Bloc> blocs;
 
-    public long getIdFoyer() {
-        return idFoyer;
-    }
 
-    public void setUniversite(Universite universite) {
-        this.universite = universite;
-    }
-
-    public Set<Bloc> getBlocs() {
-        return blocs;
-    }
-
-    public Universite getUniversite() {
-        return universite;
-    }
 
 }

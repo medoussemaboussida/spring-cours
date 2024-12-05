@@ -25,20 +25,6 @@ public class Universite {
     @OneToOne
     private Foyer foyer;
 
-    public long getIdUniversite() {
-        return idUniversite;
-    }
 
-    public void setFoyer(Foyer foyer) {
-        this.foyer = foyer;
-    }
-
-    public String getUniversiteName() {
-        return universiteName;
-    }
-
-    public Foyer getFoyer() {
-        return foyer;
-    }
 
 }
