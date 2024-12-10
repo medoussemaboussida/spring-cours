@@ -2,6 +2,7 @@ package tn.esprit.tp2.service;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import tn.esprit.tp2.entity.Bloc;
 import tn.esprit.tp2.entity.Chambre;
 import tn.esprit.tp2.repository.BlocRepository;
@@ -9,7 +10,7 @@ import tn.esprit.tp2.repository.ChambreRepository;
 
 import java.util.List;
 
-@Repository
+@Service
 public class BlocService implements IBlocService{
     @Autowired
     BlocRepository blocRepository;

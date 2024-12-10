@@ -5,6 +5,7 @@ import org.hibernate.annotations.DialectOverride;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Repository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import tn.esprit.tp2.entity.*;
 import tn.esprit.tp2.repository.BlocRepository;
@@ -19,7 +20,7 @@ import org.hibernate.Hibernate;
 
 
 @Slf4j
-@Repository
+@Service
 public class ChambreService implements IChambreService {
     @Autowired
     ChambreRepository chambreRepository;

@@ -2,6 +2,7 @@ package tn.esprit.tp2.service;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import tn.esprit.tp2.entity.Foyer;
 import tn.esprit.tp2.entity.Universite;
 import tn.esprit.tp2.repository.FoyerRepository;
@@ -9,7 +10,7 @@ import tn.esprit.tp2.repository.UniversiteRepository;
 
 import java.util.List;
 
-@Repository
+@Service
 public class UniversiteService implements IUniversiteService {
     @Autowired
     UniversiteRepository universiteRepository;

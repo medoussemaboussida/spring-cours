@@ -2,6 +2,7 @@ package tn.esprit.tp2.service;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import tn.esprit.tp2.entity.*;
 import tn.esprit.tp2.repository.BlocRepository;
 import tn.esprit.tp2.repository.ChambreRepository;
@@ -13,7 +14,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
-@Repository
+@Service
 public class ReservationService implements IReservationService{
     @Autowired
      ReservationRepository reservationRepository;
